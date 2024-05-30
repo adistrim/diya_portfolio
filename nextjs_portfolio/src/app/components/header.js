@@ -1,25 +1,72 @@
 "use client";
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
+  const [isScrolled, setIsScrolled] = useState(false);
+
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleScroll = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    const sections = ['intro', 'projects', 'blogs', 'resume', 'certifications'];
+    const sectionElements = sections.map((id) => document.getElementById(id));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          } else {
+            setActiveSection('');
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    sectionElements.forEach((element) => {
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      sectionElements.forEach((element) => {
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+    };
+  }, []);
+
   return (
-    <header
-      className="my-5 text-black"
-      style={{
-        position: 'sticky',
-        top: 0,
-        width: '100%',
-        zIndex: 100,
-        backgroundColor: 'transparent',
-      }}
-    >
+    <>
+      <header
+        className="my-5 text-black relative bg-gradient-to-b from-white/60 via-white/40 to-transparent backdrop-filter backdrop-blur-sm"
+        style={{
+          position: 'sticky',
+          top: 0,
+          width: '100%',
+          zIndex: 100,
+          backgroundColor: 'transparent',
+        }}
+      >
       <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-12">
         <div className="tracking-widest font-semibold hover:text-[#68B3A3]">
           <Link href="/">HOME</Link>
@@ -54,39 +101,45 @@ const Header = () => {
             } md:flex md:items-center md:space-x-[3rem] md:font-light transition-all duration-500 ease-in-out`}
           style={{ maxHeight: isOpen ? '500px' : '0' }}
         >
-          <Link
+          <a
             href="#intro"
-            className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3] md:p-0"
+            className={`block py-2 pr-4 pl-3 md:p-0 ${activeSection === 'intro' ? 'text-[#68B3A3]' : 'text-gray-700'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3]`}
+            onClick={(e) => handleScroll(e, 'intro')}
           >
             INTRO
-          </Link>
-          <Link
+          </a>
+          <a
             href="#projects"
-            className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3] md:p-0"
+            className={`block py-2 pr-4 pl-3 md:p-0 ${activeSection === 'projects' ? 'text-[#68B3A3]' : 'text-gray-700'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3]`}
+            onClick={(e) => handleScroll(e, 'projects')}
           >
             PROJECTS
-          </Link>
-          <Link
+          </a>
+          <a
             href="#blogs"
-            className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3] md:p-0"
+            className={`block py-2 pr-4 pl-3 md:p-0 ${activeSection === 'blogs' ? 'text-[#68B3A3]' : 'text-gray-700'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3]`}
+            onClick={(e) => handleScroll(e, 'blogs')}
           >
             BLOGS
-          </Link>
-          <Link
-            href=""
-            className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3] md:p-0"
+          </a>
+          <a
+            href="#resume"
+            className={`block py-2 pr-4 pl-3 md:p-0 ${activeSection === 'resume' ? 'text-[#68B3A3]' : 'text-gray-700'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3]`}
+            onClick={(e) => handleScroll(e, 'resume')}
           >
             RESUME
-          </Link>
-          <Link
+          </a>
+          <a
             href="#certifications"
-            className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3] md:p-0"
+            className={`block py-2 pr-4 pl-3 md:p-0 ${activeSection === 'certifications' ? 'text-[#68B3A3]' : 'text-gray-700'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3]`}
+            onClick={(e) => handleScroll(e, 'certifications')}
           >
             CERTIFICATIONS
-          </Link>
+          </a>
         </nav>
       </div>
     </header>
+    </>
   );
 };
 
