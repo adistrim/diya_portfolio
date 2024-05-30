@@ -1,9 +1,9 @@
-import LandingPage from './components/ladingPage';
+import LandingArea from './components/ladingArea';
 
 const Home = () => {
   return (
     <div>
-      <LandingPage />
+      <LandingArea />
     
     </div>
   );
