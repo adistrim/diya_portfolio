@@ -1,9 +1,11 @@
-import LandingPage from './components/ladingPage';
+import Intro from './components/intro';
+import LandingArea from './components/ladingArea';
 
 const Home = () => {
   return (
     <div>
-      <LandingPage />
+      <LandingArea />
+      <Intro />
     
     </div>
   );
