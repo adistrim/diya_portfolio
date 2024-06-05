@@ -64,10 +64,6 @@ const LandingArea = () => {
           ↓
         </button>
       </div>
-      <div id="contact" className="mt-20 text-black">
-        {/* <h2 className="text-2xl">Contact Me</h2> */}
-        {/* Add your contact form or contact information here */}
-      </div>
     </div>
   );
 };
