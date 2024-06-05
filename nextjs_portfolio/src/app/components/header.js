@@ -105,35 +105,35 @@ const Header = () => {
         >
           <a
             href="#intro"
-            className={`block py-2 pr-4 pl-3 md:p-0 ${activeSection === 'intro' ? 'text-[#68B3A3]' : 'text-gray-700'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3]`}
+            className={`block py-2 pr-4 pl-3 md:p-0 ${activeSection === 'intro' ? 'text-[#68B3A3]' : 'text-gray-700'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3] font-semibold`}
             onClick={(e) => handleScroll(e, 'intro')}
           >
             INTRO
           </a>
           <a
             href="#projects"
-            className={`block py-2 pr-4 pl-3 md:p-0 ${activeSection === 'projects' ? 'text-[#68B3A3]' : 'text-gray-700'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3]`}
+            className={`block py-2 pr-4 pl-3 md:p-0 ${activeSection === 'projects' ? 'text-[#68B3A3]' : 'text-gray-700'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3] font-semibold`}
             onClick={(e) => handleScroll(e, 'projects')}
           >
             PROJECTS
           </a>
           <a
             href="#blogs"
-            className={`block py-2 pr-4 pl-3 md:p-0 ${activeSection === 'blogs' ? 'text-[#68B3A3]' : 'text-gray-700'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3]`}
+            className={`block py-2 pr-4 pl-3 md:p-0 ${activeSection === 'blogs' ? 'text-[#68B3A3]' : 'text-gray-700'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3] font-semibold`}
             onClick={(e) => handleScroll(e, 'blogs')}
           >
             BLOGS
           </a>
           <a
             href="#resume"
-            className={`block py-2 pr-4 pl-3 md:p-0 ${activeSection === 'resume' ? 'text-[#68B3A3]' : 'text-gray-700'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3]`}
+            className={`block py-2 pr-4 pl-3 md:p-0 ${activeSection === 'resume' ? 'text-[#68B3A3]' : 'text-gray-700'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3] font-semibold`}
             onClick={(e) => handleScroll(e, 'resume')}
           >
             RESUME
           </a>
           <a
             href="#certifications"
-            className={`block py-2 pr-4 pl-3 md:p-0 ${activeSection === 'certifications' ? 'text-[#68B3A3]' : 'text-gray-700'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3]`}
+            className={`block py-2 pr-4 pl-3 md:p-0 ${activeSection === 'certifications' ? 'text-[#68B3A3]' : 'text-gray-700'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#68B3A3] font-semibold`}
             onClick={(e) => handleScroll(e, 'certifications')}
           >
             CERTIFICATIONS

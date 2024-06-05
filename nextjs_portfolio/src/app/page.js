@@ -1,5 +1,5 @@
 import Intro from './components/intro';
-import LandingArea from './components/ladingArea';
+import LandingArea from './components/landingArea';
 import Projects from './components/projects';
 import Contact from './components/contact';
 

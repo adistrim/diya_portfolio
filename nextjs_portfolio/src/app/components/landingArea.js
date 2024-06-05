@@ -45,9 +45,7 @@ const LandingArea = () => {
           </Link>
         </div>
         <p className="text-base md:text-lg max-w-xl mx-auto mb-10">
-          👋 Hi! I&apos;m a freelance software engineer specializing in data science
-          and machine learning. I&apos;ve worked on many projects. I&apos;m open to work
-          on any exciting project right now. 🐼
+          👋 Hi, I&apos;m a undergrad software engineer fueled by curiosity. I love tinkering with data and figuring out how to teach machines some cool tricks, sometimes it works 🐼
         </p>
         <button
           className="mt-6 py-2 px-4 bg-[#68B3A3] text-white rounded hover:bg-[#68B3A3] hover:opacity-80"
