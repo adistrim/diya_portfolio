@@ -2,6 +2,7 @@
 import React from 'react';
 import { FaKaggle, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import Link from 'next/link';
+import GreenButton from './greenButton';
 
 const LandingArea = () => {
   const handleScroll = () => {
@@ -47,12 +48,7 @@ const LandingArea = () => {
         <p className="text-base md:text-lg max-w-xl mx-auto mb-10">
           👋 Hi, I&apos;m a undergrad software engineer fueled by curiosity. I love tinkering with data and figuring out how to teach machines some cool tricks, sometimes it works 🐼
         </p>
-        <button
-          className="mt-6 py-2 px-4 bg-[#68B3A3] text-white rounded hover:bg-[#68B3A3] hover:opacity-80"
-          onClick={handleScroll}
-        >
-          Contact
-        </button>
+        <GreenButton content="Contact" onClick={handleScroll} />
       </div>
       <div className="mt-20">
         <button
