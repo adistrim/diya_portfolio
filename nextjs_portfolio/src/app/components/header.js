@@ -5,8 +5,6 @@ import { useState, useEffect } from 'react';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
-  const [isScrolled, setIsScrolled] = useState(false);
-
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -55,6 +53,10 @@ const Header = () => {
     };
   }, []);
 
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <>
       <header
@@ -68,8 +70,8 @@ const Header = () => {
         }}
       >
       <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-12">
-        <div className="tracking-widest font-semibold hover:text-[#68B3A3]">
-          <Link href="/">HOME</Link>
+        <div className="cursor-pointer tracking-widest font-semibold hover:text-[#68B3A3]">
+          <p onClick={scrollToTop} >HOME</p>
         </div>
         <div className="md:hidden">
           <button
