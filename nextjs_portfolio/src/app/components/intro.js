@@ -18,15 +18,9 @@ const Intro = () => {
         </div>
         <div className="w-full md:w-2/3 lg:w-3/4 md:pl-8 lg:pl-12 text-center md:text-left">
           <h2 className="text-2xl md:text-3xl font-semibold mb-4">Hi, I&apos;m Diya.</h2>
-          <p className="text-base md:text-lg mb-4">
-            I specialize in helping companies and researchers analyze and visualize their datasets. I
-            excel in data visualization. If you&apos;re looking for guidance on presenting your results or
-            building complex interactive charts, I&apos;m the expert you&apos;re seeking.
-          </p>
-          <p className="text-base md:text-lg mb-4">
-            With a solid 2-year track record in data science, I&apos;ve collaborated & worked on many
-            projects. Right now I&apos;m in my 4th year of B.Tech. in Computer Science & Engineering at{' '}
-            <Link
+          <p className="text-sm md:text-base">
+          I&apos;m specializing in data science and machine learning. My academic journey has been a thrilling exploration of technology, from writing code to working on machine-learning algorithms and working on amazing projects at{' '}
+          <Link
               href="https://www.jklu.edu.in/"
               target="_blank"
               rel="noopener noreferrer"
@@ -36,7 +30,10 @@ const Intro = () => {
             </Link>
             .
           </p>
-          <p className="text-base md:text-lg">I&apos;m now working as a X at something.</p>
+          <p className="text-sm md:text-base">
+            As I&apos;m near the completion of my undergraduate studies, I&apos;m excited to bring my knowledge and passion to the industry. I look forward to engaging in projects, learning from professionals, and contributing to the open source.
+          </p>
+          <p className="text-sm md:text-base">I&apos;m currently working as a Machine Learning Intern at Blueberry Capital.</p>
         </div>
       </div>
     </div>
