@@ -30,9 +30,11 @@ const Intro = () => {
             </Link>
             .
           </p>
+          <br />
           <p className="text-sm md:text-base">
             As I&apos;m near the completion of my undergraduate studies, I&apos;m excited to bring my knowledge and passion to the industry. I look forward to engaging in projects, learning from professionals, and contributing to the open source.
           </p>
+          <br />
           <p className="text-sm md:text-base">I&apos;m currently working as a Machine Learning Intern at Blueberry Capital.</p>
         </div>
       </div>
