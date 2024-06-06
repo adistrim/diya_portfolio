@@ -1,16 +1,17 @@
 "use client";
 import React from 'react';
 import GreenButton from './greenButton';
+import { Roboto_Slab } from "next/font/google";
 
+const robotoSlab = Roboto_Slab({ subsets: ["latin"] });
 const Contact = () => {
     return (
         <section id='contact' className="flex flex-col justify-center items-center min-h-screen bg-[#F8F9FA] py-8 px-4">
             <div className='max-w-3xl'>
-                <h2 className="text-4xl font-semibold text-center mb-4">CONTACT</h2>
-                <p className="text-gray-700 italic text-center mb-8">
-                Interested in working together or simply want to chat about technology and innovation?
+                <h2 className={`text-4xl font-semibold text-center mb-4 ${robotoSlab.className}`}>CONTACT</h2>
                 <br />
-                I'm just a message away!📧
+                <p className={`text-gray-700 italic text-center mb-8 ${robotoSlab.className}`}>
+                Feel free to reach out let's connect!!📧
                 </p>
                 <p className='text-center'>
                     For open source projects, please open an issue or pull request on{' '}

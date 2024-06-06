@@ -1,9 +1,9 @@
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Diya Mathur",
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={inter.className}>
+      <body className={montserrat.className}>
         <Header />
         {children}
         <Footer />

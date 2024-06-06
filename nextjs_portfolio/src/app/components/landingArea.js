@@ -3,7 +3,9 @@ import React from 'react';
 import { FaKaggle, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import Link from 'next/link';
 import GreenButton from './greenButton';
+import { Roboto_Slab } from "next/font/google";
 
+const robotoSlab = Roboto_Slab({ subsets: ["latin"] }); 
 const LandingArea = () => {
   const handleScroll = () => {
     const element = document.getElementById('contact');
@@ -18,8 +20,8 @@ const LandingArea = () => {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-white text-black">
       <div className="text-center px-6 md:px-0">
-        <h1 className="text-3xl md:text-4xl font-semibold mb-[1rem]">
-          🦄 DIYA MATHUR 🍩
+        <h1 className={`text-3xl md:text-4xl font-semibold mb-[1rem] ${robotoSlab.className}`}>
+          🌻 DIYA MATHUR 🍩
         </h1>
         <hr className="w-1/4 mx-auto my-[2rem]" />
         <div className="flex justify-center space-x-6 my-4">
@@ -45,8 +47,8 @@ const LandingArea = () => {
             <FaKaggle size={24} className="hover:text-[#68B3A3]" />
           </Link>
         </div>
-        <p className="text-base md:text-lg max-w-xl mx-auto mb-10">
-          👋 Hi, I&apos;m a undergrad software engineer fueled by curiosity. I love tinkering with data and figuring out how to teach machines some cool tricks, sometimes it works 🐼
+        <p className={`text-base md:text-lg max-w-xl mx-auto mb-10 & ${robotoSlab.className}`}>
+          👋 Hi, I&apos;m a undergrad software engineer fueled by curiosity. I love tinkering with data and figuring out how to teach machines some cool tricks, sometimes it works 🌈
         </p>
         <GreenButton content="Contact" onClick={handleScroll} />
       </div>
