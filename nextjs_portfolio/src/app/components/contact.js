@@ -11,7 +11,7 @@ const Contact = () => {
                 <h2 className={`text-4xl font-semibold text-center mb-4 ${robotoSlab.className}`}>CONTACT</h2>
                 <br />
                 <p className={`text-gray-700 italic text-center mb-8 ${robotoSlab.className}`}>
-                Feel free to reach out let's connect!!📧
+                Have a project in mind? Feel free to reach out! 📧
                 </p>
                 <p className='text-center'>
                     For open source projects, please open an issue or pull request on{' '}

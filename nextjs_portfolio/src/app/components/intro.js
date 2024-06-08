@@ -13,15 +13,15 @@ const Intro = () => {
           <Image
             src="/diya_mathur.png"
             alt="Diya Mathur"
-            width={300}
-            height={300}
+            width={400}
+            height={400}
             className="rounded-md shadow-lg max-w-full"
           />
         </div>
         <div className="w-full md:w-2/3 lg:w-3/4 md:pl-8 lg:pl-12 text-center md:text-left">
-          <h2 className={`text-2xl md:text-3xl font-semibold mb-4 ${robotoSlab.className} `}>Hi, I&apos;m Diya 👩🏽‍💻</h2>
+          <h2 className={`text-2xl md:text-3xl font-semibold mb-4 ${robotoSlab.className} `}>I&apos;m Diya 👩🏽‍💻</h2>
           <p className={`text-sm md:text-base ${robotoSlab.className}`}>
-          Data's ability to weave narratives and fuel innovation has always captivated me. My academic journey has been a thrilling exploration of technology, where I honed my coding skills, delved into the fascinating world of machine learning algorithms, and brought them to life through impactful projects at{' '}
+          Data&apos;s ability to weave narratives and fuel innovation has always captivated me. My academic journey has been an exploration of tech, where I worked on my coding skills, studied machine learning algorithms, and brought them to life through cool projects at{' '}
           <Link
               href="https://www.jklu.edu.in/"
               target="_blank"
@@ -34,11 +34,11 @@ const Intro = () => {
           </p>
           <br />
           <p className={`text-sm md:text-base ${robotoSlab.className}`}>
-          Now, nearing the completion of my undergraduate studies, I&apos;m eager to bridge this academic foundation with the world of professional practice. I&apos;m excited to tackle real-world challenges, learn from industry veterans, and actively contribute to the open-source community.
+          Now, nearing the completion of my undergraduate studies, I&apos;m eager to bridge this academic foundation with the world of professional practice. And, now I&apos;m a growing Software Engineer.
           </p>
           <br />
           <p className={`text-sm md:text-base ${robotoSlab.className}`}>
-          Currently, I&apos;m gaining valuable experience as a Machine Learning Intern at Blueberry Capital.</p>
+          Currently, I&apos;m working at Blueberry Capital as a Machine Learning Intern.</p>
         </div>
       </div>
     </div>

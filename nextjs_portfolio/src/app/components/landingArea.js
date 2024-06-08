@@ -48,14 +48,14 @@ const LandingArea = () => {
           </Link>
         </div>
         <p className={`text-base md:text-lg max-w-xl mx-auto mb-10 & ${robotoSlab.className}`}>
-          👋 Hi, I&apos;m a undergrad software engineer fueled by curiosity. I love tinkering with data and figuring out how to teach machines some cool tricks, sometimes it works 🌈
+          👋 Hi, I&apos;m a undergrad software engineer fueled by curiosity. I love tinkering with data and figuring out how to teach machines some cool tricks, sometimes it works ✨
         </p>
         <GreenButton content="Contact" onClick={handleScroll} />
       </div>
       <div className="mt-20">
         <button
           onClick={handleArrScroll}
-          className="text-xl text-[#68B3A3] animate-bounce"
+          className="text-2xl text-[#68B3A3] animate-bounce"
         >
           ↓
         </button>
